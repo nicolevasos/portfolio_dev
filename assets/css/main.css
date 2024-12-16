@@ -2567,11 +2567,11 @@ input[type="button4"],
 	height: 0;
 	overflow: hidden;
 	max-width: 100%;
+	
 	}
 
 
 	.iframe-responsive iframe {
-	padding-top: 3.25%;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -2647,6 +2647,7 @@ input[type="button4"],
 	.wrapper {
 		padding: 4.5em 0 1.5em 0;
 		
+		
 	}
 	.wrapper h2 {
 		font-size: 1.35em; /* Set the font size of the h2 */
@@ -2659,7 +2660,7 @@ input[type="button4"],
 
 		.wrapper.style2 {
 			background: #c7bdce;
-			background-image: -webkit-linear-gradient(top, rgba(23, 24, 32, 0.077),rgba(28, 29, 38, 0.709)), url(images/overlay.png);
+			background-image: -webkit-linear-gradient(top, rgb(178 178 179 / 0%), rgb(28 29 38));
 		}
 
 			.wrapper.style2 input[type="text"]:focus,
