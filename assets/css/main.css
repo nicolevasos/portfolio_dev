@@ -1174,6 +1174,7 @@ hr {
 		select:invalid,
 		textarea:invalid {
 			box-shadow: none;
+			margin: 1em;
 		}
 
 		input[type="text"]:focus,
@@ -2594,11 +2595,21 @@ input[type="button4"],
 /* Wrapper */
 
 	.wrapper {
-		padding: 6em 0 4em 0;
+		padding: 4.5em 0 1.5em 0;
+		
 	}
+	.wrapper h2 {
+		font-size: 1.35em; /* Set the font size of the h2 */
+		text-align: center; /* Center the text */
+		line-height: 0.05; /* Adjust line height for readability */
+		
+		
+	  }
+	 
 
 		.wrapper.style2 {
-			background: #b89fb8;
+			background: #c7bdce;
+			background-image: -webkit-linear-gradient(top, rgba(23, 24, 32, 0.077),rgba(28, 29, 38, 0.709)), url(images/overlay.png);
 		}
 
 			.wrapper.style2 input[type="text"]:focus,
@@ -4051,3 +4062,304 @@ body {
         margin-bottom: 10px; /* Add space between stacked images */
     }
 }
+
+/* Main section wrapper */
+.about-me {
+  display: flex;
+  justify-content: space-between; /* Ensures the content is spaced out horizontally */
+  align-items: flex-start;
+  padding: 50px 30px;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 300px; /* Ensure it's large enough */
+  position: relative; /* Allows for absolute positioning of the divider */
+  flex-wrap: wrap;  /* Allow the sections to wrap on small screens */
+}
+
+/* Left Section (Description + Interests) */
+.about-left {
+  flex: 2;  /* Take 3 parts of the total space (wider left section) */
+  padding-right: 90px;
+  padding-left: 50px;
+  order: 1;  /* Default order (comes first on larger screens) */
+}
+
+/* Right Section (Title) */
+.about-right {
+  flex: 1;  /* Take 1 part of the total space (narrower right section) */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  order: 2;  /* Default order (comes second on larger screens) */
+  padding-left: 30px;
+}
+
+/* Vertical Divider (default for larger screens) */
+.about-divider {
+  border-left: 3px solid #fafafa; /* Divider color and thickness */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 32%; /* Center it horizontally */
+  transform: translateX(-50%); /* Fine-tune centering */
+  z-index: 10;
+  margin: 0 20px;
+  height: 100%; /* Ensure it stretches across the height of the section */
+}
+
+/* Basic styling for the left content */
+.about-left p {
+  font-size: 1.2em;
+}
+
+.about-left ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-left li {
+  font-size: 1.1em;
+}
+
+/* Right Section Title Styling */
+.about-right h2 {
+  font-size: 2.2em;
+  margin-top: 0;
+}
+
+/* Media Queries for smaller devices */
+@media (max-width: 768px) {
+  .about-me {
+    flex-direction: column; /* Stack the sections vertically on small screens */
+  }
+
+  /* Change the order for small screens */
+  .about-left {
+    order: 2; /* Move the left section below the right section */
+    flex: 1;  /* Reset to 1 on smaller screens (to make it take equal space with the right section) */
+  }
+
+  .about-right {
+    order: 1; /* Move the right section above the left section */
+    flex: 1;  /* Reset to 1 on smaller screens */
+  }
+
+  /* Optional: Adjust the font size for smaller screens */
+  .about-left p {
+    font-size: 1em;
+  }
+
+  .about-left li {
+    font-size: 1em;
+  }
+
+  .about-right h2 {
+    font-size: 1.8em; /* Adjust the title size for smaller screens */
+  }
+
+  /* Adjust divider for smaller screens (horizontal divider) */
+  .about-divider {
+    border-left: none;  /* Remove the vertical border */
+    border-top: 3px solid #f2f2f2; /* Create a horizontal divider */
+    width: 100%; /* Make the divider take full width */
+    height: 3px; /* Set height to be small for horizontal divider */
+    margin: 20px 0; /* Add vertical margin between sections */
+    position: relative; /* Reset position */
+    left: 0; /* Divider takes the full width of the section */
+  }
+}
+
+/* wrapper1 */
+
+.wrapper1 {
+	padding: 6em 0 4em 0;
+}
+
+	.wrapper1.style2 {
+		background: #b89fb8;
+		background-image: -webkit-linear-gradient(top, rgba(28, 29, 38, 0.95), rgba(23, 24, 32, 0.05)), url(images/overlay.png);
+
+	}
+	
+
+		.wrapper1.style2 input[type="text"]:focus,
+		.wrapper1.style2 input[type="password"]:focus,
+		.wrapper1.style2 input[type="email"]:focus,
+		.wrapper1.style2 select:focus,
+		.wrapper1.style2 textarea:focus {
+			border-color: rgba(255, 255, 255, 0.5);
+		}
+
+		.wrapper1.style2 input[type="submit"]:hover, .wrapper1.style2 input[type="submit"]:active,
+		.wrapper1.style2 input[type="reset"]:hover,
+		.wrapper1.style2 input[type="reset"]:active,
+		.wrapper1.style2 input[type="button"]:hover,
+		.wrapper1.style2 input[type="button"]:active,
+		.wrapper1.style2 .button:hover,
+		.wrapper1.style2 .button:active {
+			background-color: rgba(255, 255, 255, 0.075) !important;
+			box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5) !important;
+			color: #ffffff !important;
+		}
+
+		.wrapper1.style2 input[type="submit"]:active,
+		.wrapper1.style2 input[type="reset"]:active,
+		.wrapper1.style2 input[type="button"]:active,
+		.wrapper1.style2 .button:active {
+			background-color: rgba(255, 255, 255, 0.25) !important;
+		}
+
+		.wrapper1.style2 input[type="submit"].primary,
+		.wrapper1.style2 input[type="reset"].primary,
+		.wrapper1.style2 input[type="button"].primary,
+		.wrapper1.style2 .button.primary {
+			background-color: #ffffff;
+			color: #a581a5 !important;
+		}
+
+			.wrapper1.style2 input[type="submit"].primary:hover, .wrapper1.style2 input[type="submit"].primary:active,
+			.wrapper1.style2 input[type="reset"].primary:hover,
+			.wrapper1.style2 input[type="reset"].primary:active,
+			.wrapper1.style2 input[type="button"].primary:hover,
+			.wrapper1.style2 input[type="button"].primary:active,
+			.wrapper1.style2 .button.primary:hover,
+			.wrapper1.style2 .button.primary:active {
+				background-color: rgba(255, 255, 255, 0.075) !important;
+				box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5) !important;
+				color: #ffffff !important;
+			}
+
+			.wrapper1.style2 input[type="submit"].primary:active,
+			.wrapper1.style2 input[type="reset"].primary:active,
+			.wrapper1.style2 input[type="button"].primary:active,
+			.wrapper1.style2 .button.primary:active {
+				background-color: rgba(255, 255, 255, 0.25) !important;
+			}
+
+	.wrapper1.fade-down > .container {
+		-moz-transform: translate(0,0);
+		-webkit-transform: translate(0,0);
+		-ms-transform: translate(0,0);
+		transform: translate(0,0);
+		-moz-transition: -moz-transform 1s ease, opacity 1s ease;
+		-webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
+		-ms-transition: -ms-transform 1s ease, opacity 1s ease;
+		transition: transform 1s ease, opacity 1s ease;
+		opacity: 1;
+	}
+
+	.wrapper1.fade-down.inactive > .container {
+		-moz-transform: translate(0,-1em);
+		-webkit-transform: translate(0,-1em);
+		-ms-transform: translate(0,-1em);
+		transform: translate(0,-1em);
+		opacity: 0;
+	}
+
+	.wrapper1.fade-up > .container {
+		-moz-transform: translate(0,0);
+		-webkit-transform: translate(0,0);
+		-ms-transform: translate(0,0);
+		transform: translate(0,0);
+		-moz-transition: -moz-transform 1s ease, opacity 1s ease;
+		-webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
+		-ms-transition: -ms-transform 1s ease, opacity 1s ease;
+		transition: transform 1s ease, opacity 1s ease;
+		opacity: 1;
+	}
+
+	.wrapper1.fade-up.inactive > .container {
+		-moz-transform: translate(0,1em);
+		-webkit-transform: translate(0,1em);
+		-ms-transform: translate(0,1em);
+		transform: translate(0,1em);
+		opacity: 0;
+	}
+
+	.wrapper1.fade > .container {
+		-moz-transition: opacity 1s ease;
+		-webkit-transition: opacity 1s ease;
+		-ms-transition: opacity 1s ease;
+		transition: opacity 1s ease;
+		opacity: 1;
+	}
+
+	.wrapper1.fade.inactive > .container {
+		opacity: 0;
+	}
+
+
+/* Custom Icon */
+.custom-icon {
+	text-decoration: none;
+	border-bottom: none;
+	position: relative;
+	transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for scaling and color */
+	display: inline-block;
+	font-size: 1.5em; /* Icon size */
+	color: #d4cbd4; /* Default color for icons */
+  }
+  
+  /* Basic icon settings */
+  .custom-icon:before {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+	text-transform: none !important;
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 400;
+  }
+  
+  /* Hide the label text */
+  .custom-icon > .label {
+	display: none;
+  }
+  
+  /* Solid icon style */
+  .custom-icon.solid:before {
+	font-weight: 600 !important;
+  }
+  
+  /* Brands icon style */
+  .custom-icon.brands:before {
+	font-family: 'Font Awesome 5 Brands' !important;
+  }
+  
+  /* Styling for anchor links inside custom-icon */
+  .custom-icon:hover {
+	color: #514c5b !important;
+	border-bottom-color: transparent;
+  }
+  
+  /* Icons container (ul) */
+  ul.icons {
+	list-style-type: none;
+	padding: 0;
+	
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+  }
+  
+  /* Icon list items (li) */
+  ul.icons li {
+	margin: 0 2px; /* Adjusted spacing between icons */
+  }
+  
+  /* Styling for anchor links inside custom-icon */
+  .custom-icon {
+	transition: color 0.3s ease; /* Smooth transition for color */
+  }
+  
+  /* Hover effect for icon */
+  .custom-icon:hover {
+	color: #a581a5 !important;
+	text-decoration: none;
+  }
+  
