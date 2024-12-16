@@ -1,7 +1,9 @@
-@import url("fontawesome-all.min.css");
+/* Import Font Awesome from CDN */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+/* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
 @import url("https://fonts.googleapis.com/css?family=Syne:400,500,600,700,800");
-
 
 
 
@@ -56,25 +58,22 @@ table {
 }
 
 /* Section with specific background image */
+/* Section with specific background image */
 #pre {
     display: flex;                     /* Enable Flexbox */
     flex-direction: column;            /* Stack children vertically */
     justify-content: center;           /* Vertically center the content */
     align-items: center;               /* Horizontally center the content */
-    
     /* Background Gradient + Image */
     background-image: 
         -webkit-linear-gradient(top, rgba(234, 234, 238, 0.95), rgba(23, 24, 32, 0.05)), 
-        url('/images/pic04.jpg');      /* Set your image URL */
-    
+        url('images/pic04.jpg');      /* Set your image URL */
     background-size: cover;            /* Ensure the image covers the entire section */
     background-position: center;       /* Keep the image centered */
     background-repeat: no-repeat;      /* Prevent tiling of the image */
-    
     padding: 50px 0;                   /* Optional: Add padding */
     min-height: 94vh;                  /* Take full viewport height */
 }
-
 
 
 
@@ -2224,7 +2223,55 @@ input[type="button4"],
 			background-color: rgba(254, 254, 254, 0);
 		}
 
-	
+			/* Button7 */
+
+			input[type="submit"],
+			input[type="reset"],
+			input[type="button7"],
+			.button7 {
+				-moz-appearance: none;
+				-webkit-appearance: none;
+				-ms-appearance: none;
+				appearance: none;
+				-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+				-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+				-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+				transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+				background-color: #ae9a5a;
+				border-radius: 4px;
+				border: 0;
+				box-shadow: inset 0 0 0 2.5px rgba(255, 255, 255, 0.5);
+				color: #ffffff !important;
+				cursor: pointer;
+				display: inline-block;
+				font-weight: 600;
+				height: 3em;
+				line-height: 3em;
+				padding: 0 2.25em;
+				text-align: center;
+				text-decoration: none;
+				white-space: nowrap;
+			}
+			
+				input[type="submit"]:hover, input[type="submit"]:active,
+				input[type="reset"]:hover,
+				input[type="reset"]:active,
+				input[type="button7"]:hover,
+				input[type="button7"]:active,
+				.button7:hover,
+				.button7:active {
+					box-shadow: inset 0 0 0 1.5px #ae9a5a;
+					color: #ae9a5a !important;
+					background-color: #fafafa;
+				}
+			
+				input[type="submit"]:active,
+				input[type="reset"]:active,
+				input[type="button"]:active,
+				.button7:active {
+					background-color: rgba(254, 254, 254, 0);
+				}
+		
 
 /* Goto Next */
 
@@ -2454,7 +2501,10 @@ input[type="button4"],
 		.spotlight.style6 .content {
 			border-color: #b89fb8;
 		}
-
+		.spotlight.style7 .content {
+			border-color: #ae9a5a;
+		}
+		
 		.spotlight.inactive .content {
 			opacity: 0;
 		}
@@ -2601,7 +2651,7 @@ input[type="button4"],
 	.wrapper h2 {
 		font-size: 1.35em; /* Set the font size of the h2 */
 		text-align: center; /* Center the text */
-		line-height: 0.05; /* Adjust line height for readability */
+		line-height: 1; /* Adjust line height for readability */
 		
 		
 	  }
@@ -3830,53 +3880,56 @@ body {
 }
 
 
-/* Skills Progress Bars */
-.cv-section .skill-bar {
-    padding-right: 20px;
-    margin-bottom: 20px;
-    opacity: 0; /* Make it invisible initially */
-    transition: opacity 1s ease-in; /* Fade-in transition when becoming visible */
+/* Skills Section */
+h2 {
+    margin-bottom: 10px; /* Reduce space below the heading */
 }
 
-.cv-section .skill-bar.visible {
-    opacity: 1; /* Fade in when visible */
+.skills {
+    margin: 0;
+	padding-right:15px;
 }
 
-.cv-section .skill-name {
+.skill-bar {
+    margin-bottom: 2px; /* Reduced space between skill bars */
+}
+
+.skill-name {
+	font-size: 13px;
     display: block;
     font-weight: bold;
-    color: #333;
-    margin-bottom: 5px;
+    color: #fafafa;
+	transform: translate(2%, 100%);
 }
 
-.cv-section .bar {
+.bar {
     width: 100%;
     background-color: #e0e0e0;
     border-radius: 5px;
     overflow: hidden;
+    margin-bottom: 5px; /* Reduce space between the bar and percentage text */
 }
 
-.cv-section .progress-bar {
-	
-    height: 20px;
+.progress-bar {
+    height: 30px;
     background-color: #947594;
     width: 0;
     border-radius: 5px;
     transition: width 1s ease-out; /* Smooth width transition */
 }
 
-/* Smooth fill effect on visibility */
-.cv-section .progress-bar.visible {
-    animation: fillBar 2s forwards;
-}
-
 /* Adding percentage text inside skill bars */
-.cv-section .progress-percentage {
-    display: block;
-    margin-top: 5px;
+.progress-percentage {
+    display: none;
     text-align: right;
     font-size: 0.9em;
     color: #333;
+    margin-top: 5px; /* Reduce space between percentage text and progress bar */
+}
+
+/* Smooth fill effect on visibility */
+.progress-bar.visible {
+    animation: fillBar 2s forwards;
 }
 
 /* Mobile Styles */
@@ -3905,7 +3958,33 @@ body {
     }
 }
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .cv-section .container {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .cv-section .left-column, .cv-section .right-column {
+        width: 100%;
+        margin-bottom: 20px;
+        border-right: none; /* Remove divider for small screens */
+    }
+
+    .cv-section::after {
+        left: 50%;
+        top: 0;
+        height: auto; /* Remove the height so it's not visible in column layout */
+        width: 2px;
+        background-color: transparent; /* No line in column layout */
+    }
+
+    .cv-section .timeline {
+        padding-left: 10px;
+    }
+}
+
+/* Language Tables */
 .proficiency-table {
     border-collapse: collapse;
     width: 100%;
@@ -4079,7 +4158,7 @@ body {
 /* Left Section (Description + Interests) */
 .about-left {
   flex: 2;  /* Take 3 parts of the total space (wider left section) */
-  padding-right: 90px;
+  padding-right: 50px;
   padding-left: 50px;
   order: 1;  /* Default order (comes first on larger screens) */
 }
@@ -4102,7 +4181,7 @@ body {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 32%; /* Center it horizontally */
+  right: 28%; /* Center it horizontally */
   transform: translateX(-50%); /* Fine-tune centering */
   z-index: 10;
   margin: 0 20px;
