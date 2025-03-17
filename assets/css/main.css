@@ -2645,7 +2645,7 @@ input[type="button4"],
 /* Wrapper */
 
 	.wrapper {
-		padding: 4.5em 0 1.5em 0;
+		padding: 2.5em 0 1.5em 0;
 		
 		
 	}
@@ -4163,6 +4163,11 @@ h2 {
   padding-left: 50px;
   order: 1;  /* Default order (comes first on larger screens) */
 }
+.about-left p {
+	/* Justify the paragraph text */
+	text-align: justify;
+	line-height: 1.6; /* Optional: increases the space between lines for readability */
+  }
 
 /* Right Section (Title) */
 .about-right {
@@ -4442,4 +4447,76 @@ h2 {
 	color: #a581a5 !important;
 	text-decoration: none;
   }
-  
+
+  .container23 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+	padding: 50px; /* Default padding for small screens */
+}
+
+@media (min-width: 1024px) and (max-width: 1940px) {
+	.container23 {
+		padding-left: 130px;
+		padding-right: 130px;
+		padding-top: 80px;
+	}
+}
+
+
+.project-card {
+    display: flex;            /* Enable flexbox */
+    flex-direction: column;   /* Stack children vertically */
+    background: #ebeaed;
+    border-radius: 0px;
+    box-shadow: -20px -2px 20px 2px rgba(0, 0, 0, 0.2), 13px -14px 40px 15px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    overflow: hidden;
+    text-align: left;
+}
+
+
+.project-card img {
+	width: 100%;
+	height: 220px;
+	object-fit: cover;
+    object-position: top;
+}
+
+.project-card h3 {
+	margin: 15px 15px 5px; /* Reduced bottom margin to 5px */
+	color: #50444e;
+	font-weight:500;
+}
+
+.project-card p {
+	margin-right: 15px;
+	margin-left: 15px;
+	margin-bottom: 15px;
+	color: black;
+	font-size: 0.9em;
+	text-align: justify;
+	line-height: 1.6;
+	
+}
+
+.project-card a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	background-color: #837183;
+	padding: 10px;
+	text-align: center;
+	margin-top: auto; 
+}
+
+.project-card p.italic {
+	font-style: italic; 
+	color: rgb(58, 56, 56);
+	margin-bottom: 25px;
+	}
+
+.project-card a:hover {
+	background-color: #d0c4d0;
+}
